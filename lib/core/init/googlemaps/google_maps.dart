@@ -7,9 +7,11 @@ class GoogleMapsView extends StatefulWidget {
 }
 
 class _GoogleMapsViewState extends State<GoogleMapsView> {
-  static final CameraPosition _shipLocation = CameraPosition(target: LatLng(40.37038345471841, 27.953930036762397), zoom: 12);
 
-  @override
+  static final CameraPosition _shipLocation = CameraPosition(
+    target: LatLng(40.37038345471841, 27.953930036762397), zoom: 12);
+  BitmapDescriptor favIcon;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,12 +27,10 @@ class _GoogleMapsViewState extends State<GoogleMapsView> {
     );
   }
 
-  BitmapDescriptor favIcon;
-
   Future<void> _createMarkerImageFromAssets(BuildContext context) async {
     if (favIcon == null) {
       final ImageConfiguration imageConfiguration = createLocalImageConfiguration(context);
-      var bitmap = await BitmapDescriptor.fromAssetImage(imageConfiguration, "assets/photo/logo.jpg");
+      var bitmap = await BitmapDescriptor.fromAssetImage(imageConfiguration, "assets/icons/fishing-boat-64.png");
       favIcon = bitmap;
       setState(() {});
     }
@@ -43,7 +43,7 @@ class _GoogleMapsViewState extends State<GoogleMapsView> {
         position: _shipLocation.target,
         icon: favIcon,
         zIndex: 10,
-        infoWindow: InfoWindow(title: "Teslim Noktası"),
+        infoWindow: InfoWindow(title: "My Ship"),
       ),
     ].toSet();
   }
