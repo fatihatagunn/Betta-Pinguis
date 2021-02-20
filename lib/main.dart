@@ -12,7 +12,18 @@ class MyApp extends StatelessWidget {
       title: 'Betta Pinguis',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: MaterialColor(0xFF004AAD, {
+          50: Color(0xFFE0E9F5),
+          100: Color(0xFFB3C9E6),
+          200: Color(0xFF80A5D6),
+          300: Color(0xFF4D80C6),
+          400: Color(0xFF2665B9),
+          500: Color(0xFF004AAD),
+          600: Color(0xFF0043A6),
+          700: Color(0xFF003A9C),
+          800: Color(0xFF003293),
+          900: Color(0xFF002283),
+        }),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(

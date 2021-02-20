@@ -1,4 +1,5 @@
 import 'package:bettapinguis/core/base/state/base_state.dart';
+import 'package:bettapinguis/core/init/googlemaps/google_maps.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 import 'package:flutter/material.dart';
 
@@ -29,14 +30,8 @@ class _MyHomePageState extends BaseState<MyHomePage> {
               [
                 Container(
                   width: dynamicWidth(1),
-                  height: dynamicHeight(0.3),
-                  color: Colors.red,
-                  child: Center(
-                    child: Text(
-                      'Google Map',
-                      style: Theme.of(context).textTheme.headline4,
-                    ),
-                  ),
+                  height: dynamicHeight(0.45),
+                  child: GoogleMapsView(),
                 ),
                 Center(
                   child: Container(
@@ -85,15 +80,25 @@ class _MyHomePageState extends BaseState<MyHomePage> {
                 appearance: CircularSliderAppearance(
                   customWidths: CustomSliderWidths(progressBarWidth: 10),
                   infoProperties: InfoProperties(
+                    mainLabelStyle: TextStyle(color: Colors.blueGrey, fontSize: 32),
+                    bottomLabelStyle: TextStyle(color: Colors.blueGrey, fontSize: 24),
+                    bottomLabelText: '\nSu Sıcaklığı',
                     modifier: (value) {
                       final roundedValue = value.ceil().toInt().toString();
                       return '$roundedValue °C';
                     },
                   ),
+                  customColors: CustomSliderColors(
+                    trackColor: Colors.blueGrey,
+                    progressBarColors: [
+                      Color.fromRGBO(244, 67, 54, 1.0),
+                      Color.fromRGBO(33, 150, 243, 1.0),
+                    ],
+                  ),
                 ),
-                min: 10,
-                max: 100,
-                initialValue: 14,
+                min: 0,
+                max: 35,
+                initialValue: 9,
                 onChange: (value) {
                   print(value);
                 },
@@ -102,15 +107,27 @@ class _MyHomePageState extends BaseState<MyHomePage> {
                 appearance: CircularSliderAppearance(
                   customWidths: CustomSliderWidths(progressBarWidth: 10),
                   infoProperties: InfoProperties(
+                    mainLabelStyle: TextStyle(color: Colors.blueGrey, fontSize: 32),
+                    bottomLabelStyle: TextStyle(color: Colors.blueGrey, fontSize: 24),
+                    bottomLabelText: '\nDerinlik',
                     modifier: (value) {
                       final roundedValue = value.ceil().toInt().toString();
                       return '$roundedValue m.';
                     },
                   ),
+                  customColors: CustomSliderColors(
+                    trackColor: Colors.blueGrey,
+                    progressBarColors: [
+                      Color.fromRGBO(76, 175, 80, 1.0),
+                      Color.fromRGBO(76, 175, 80, 1.0),
+                      Color.fromRGBO(255, 193, 7, 1.0),
+                      Color.fromRGBO(244, 67, 54, 1.0),
+                    ],
+                  ),
                 ),
-                min: 10,
-                max: 100,
-                initialValue: 14,
+                min: 0,
+                max: 80,
+                initialValue: 10,
                 onChange: (value) {
                   print(value);
                 },
