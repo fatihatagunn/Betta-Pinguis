@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "299359825323",
+    "firebase_url": "https://bettapinguis-default-rtdb.firebaseio.com",
+    "project_id": "bettapinguis",
+    "storage_bucket": "bettapinguis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:299359825323:android:4dea4f233b706eb10176ee",
+        "android_client_info": {
+          "package_name": "com.informavore.bettapinguis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "299359825323-8sjs79feeduiks38j1akuib9iblhfuu0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.informavore.bettapinguis",
+            "certificate_hash": "0b5a7ae1a0edc35c9b5d70672a75a4330173e25b"
+          }
+        },
+        {
+          "client_id": "299359825323-ajehnv1d1kiaegdn23qp3bvbk559rr8h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.informavore.bettapinguis",
+            "certificate_hash": "328f597d035d7a03f220e10cc1bb09b58603c26f"
+          }
+        },
+        {
+          "client_id": "299359825323-6tpjoocd2gj9iek5oe07acfoj6ma5v0u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS9LZcM2CN2DQdbMK9nqpzNhSH5ROdw4o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "299359825323-6tpjoocd2gj9iek5oe07acfoj6ma5v0u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

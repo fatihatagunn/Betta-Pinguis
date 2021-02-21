@@ -2,6 +2,8 @@ import 'package:bettapinguis/core/init/googlemaps/google_mapscircle.dart';
 import 'package:bettapinguis/view/home/view/home_view.dart';
 import 'package:flutter/material.dart';
 
+import 'core/init/firebasemessaging/firebasemessagin.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -34,4 +36,17 @@ class MyApp extends StatelessWidget {
       ),*/
     );
   }
+}
+class MainPage extends StatelessWidget {
+  final String appTitle;
+
+  const MainPage({this.appTitle});
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+    appBar: AppBar(
+      title: Text(appTitle),
+    ),
+    body: MessagingWidget(),
+  );
 }
