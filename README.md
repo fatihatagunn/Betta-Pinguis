@@ -6,7 +6,7 @@ IOT cihazdaki veriler aynı zamanda balıkçının da kullanabileceği bir mobil
 
 Biz bu repository içerisinde gemide olacak olan IoT cihazını simule ettik.
 
-
+![Screen](https://lh6.googleusercontent.com/G3W4rYNJGTPsfXiwSbX7eXt2FhPVE-G2r-Gvcuooz0JVtIA_qcPQztV3sBDNr7ycV3qS57S-H7nk71ZC7IxD=w1920-h947-rw)
 
 ### Projede Kullanılan Diğer Teknolojiler
 
