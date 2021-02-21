@@ -16,13 +16,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends BaseState<MyHomePage> {
-
   final databaseReference = FirebaseDatabase.instance.reference();
 
   String _depth = 10.toString();
   String _temperature = 9.toString();
 
-  void updateData(){
+  void updateData() {
     databaseReference.child(widget.imo).update({
       'Anlik Avlanma Derinligi': _depth,
       'Anlik Su Sicakligi': _temperature,
@@ -33,63 +32,51 @@ class _MyHomePageState extends BaseState<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(
-        slivers: <Widget>[
-          SliverAppBar(
-            centerTitle: true,
-            title: Text('Betta Pinguis'),
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text('Betta Pinguis'),
+      ),
+      body: Column(
+        children: [
+          Container(
+            height: dynamicHeight(0.45),
+            child: GoogleMapsView(imo: widget.imo),
           ),
-          SliverList(
-            delegate: SliverChildListDelegate(
-              /* Children */
-              [
-                Container(
-                  width: dynamicWidth(1),
-                  height: dynamicHeight(0.45),
-                  child: GoogleMapsView(),
-                ),
-                Center(
-                  child: Container(
-                    width: dynamicWidth(0.5),
-                    child: ListTile(
-                      leading: Icon(Icons.account_circle_rounded, size: 48),
-                      title: Text(widget.captainName),
-                      subtitle: Text('Kaptan'),
-                    ),
-                  ),
-                ),
-              ],
+          Center(
+            child: Container(
+              width: dynamicWidth(0.5),
+              child: ListTile(
+                leading: Icon(Icons.account_circle_rounded, size: 48),
+                title: Text(widget.captainName),
+                subtitle: Text('Kaptan'),
+              ),
             ),
           ),
-          SliverGrid.count(
-            mainAxisSpacing: 10.0,
-            crossAxisSpacing: 10.0,
-            childAspectRatio: 2.2,
-            crossAxisCount: 2,
+          Row(
             children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(40, 1, 0, 1),
+              Spacer(),
+              Expanded(
+                flex: 3,
                 child: ListTile(
                   leading: Icon(Icons.anchor, size: 48),
                   title: Text(widget.shipName),
                   subtitle: Text('Gemi'),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 1, 40, 1),
+              Expanded(
+                flex: 3,
                 child: ListTile(
                   leading: Icon(Icons.alternate_email, size: 48),
                   title: Text(widget.imo),
                   subtitle: Text('IMO'),
                 ),
               ),
+              Spacer(),
             ],
           ),
-          SliverGrid.count(
-            mainAxisSpacing: 10.0,
-            crossAxisSpacing: 10.0,
-            childAspectRatio: 1.2,
-            crossAxisCount: 2,
+          Divider(thickness: 0, height: 40, indent: dynamicWidth(0.4), endIndent: dynamicWidth(0.4)),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               SleekCircularSlider(
                 appearance: CircularSliderAppearance(
