@@ -1,5 +1,6 @@
 import 'package:bettapinguis/core/base/state/base_state.dart';
 import 'package:bettapinguis/core/init/googlemaps/google_maps.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +16,20 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends BaseState<MyHomePage> {
+
+  final databaseReference = FirebaseDatabase.instance.reference();
+
+  String _depth = 10.toString();
+  String _temperature = 9.toString();
+
+  void updateData(){
+    databaseReference.child(widget.imo).update({
+      'Anlik Avlanma Derinligi': _depth,
+      'Anlik Su Sicakligi': _temperature,
+      'Anlik Konum': '40.37038345471841, 27.953930036762397',
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +50,7 @@ class _MyHomePageState extends BaseState<MyHomePage> {
                 ),
                 Center(
                   child: Container(
-                    width: dynamicWidth(0.4),
+                    width: dynamicWidth(0.5),
                     child: ListTile(
                       leading: Icon(Icons.account_circle_rounded, size: 48),
                       title: Text(widget.captainName),
@@ -101,6 +116,8 @@ class _MyHomePageState extends BaseState<MyHomePage> {
                 initialValue: 9,
                 onChange: (value) {
                   print(value);
+                  _temperature = value.toString();
+                  updateData();
                 },
               ),
               SleekCircularSlider(
@@ -130,6 +147,8 @@ class _MyHomePageState extends BaseState<MyHomePage> {
                 initialValue: 10,
                 onChange: (value) {
                   print(value);
+                  _depth = value.toString();
+                  updateData();
                 },
               ),
             ],

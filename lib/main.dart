@@ -1,4 +1,4 @@
-import 'package:bettapinguis/view/home/view/home_view.dart';
+import 'package:bettapinguis/view/splash/view/splash_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -26,11 +26,7 @@ class MyApp extends StatelessWidget {
         }),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(
-        captainName: 'Fatih',
-        shipName: 'Yaren',
-        imo: '287329472',
-      ),
+      home: SplashScreen(),
     );
   }
 }
