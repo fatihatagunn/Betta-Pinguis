@@ -1,3 +1,4 @@
+import 'package:bettapinguis/core/init/googlemaps/google_mapscircle.dart';
 import 'package:bettapinguis/view/home/view/home_view.dart';
 import 'package:flutter/material.dart';
 
@@ -26,11 +27,11 @@ class MyApp extends StatelessWidget {
         }),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(
-        captainName: 'Fatih',
-        shipName: 'Yaren',
-        imo: '287329472',
-      ),
+      home: GMap()/*MyHomePage(
+        captainName: 'Melih',
+        shipName: 'Hande',
+        imo: '6666666',
+      ),*/
     );
   }
 }
