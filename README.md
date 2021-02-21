@@ -8,6 +8,10 @@ Biz bu repository içerisinde gemide olacak olan IoT cihazını simule ettik.
 
 ![Screen](https://lh6.googleusercontent.com/G3W4rYNJGTPsfXiwSbX7eXt2FhPVE-G2r-Gvcuooz0JVtIA_qcPQztV3sBDNr7ycV3qS57S-H7nk71ZC7IxD=w1920-h947-rw)
 
+### Web Sayfası
+
+![Web](https://lh4.googleusercontent.com/SvDXTxcXO50_nvxc7GpG3uUJTDdYlMP_2llMQ0Yquhn5iwhHtU63m0uKE6fwEZ70NhxPuD5S5ZLqxMNGsTrY=w1920-h947-rw)
+
 ### Projede Kullanılan Diğer Teknolojiler
 
 - Firebase: https://bettapinguis-default-rtdb.firebaseio.com/
