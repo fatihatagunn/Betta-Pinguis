@@ -10,7 +10,7 @@ Biz bu repository içerisinde gemide olacak olan IoT cihazını simule ettik.
 
 ### Web Sayfası
 
-![Web](https://lh3.googleusercontent.com/W2_ESWd1K-C21faZ8KFeHjbz_l5-Su0eddwFve-7vnXYegmQ1AyF9W1ld3SAgjIC11c0egby9i7n0_rhuvpD=w1920-h947-rw)
+![Web](https://lh5.googleusercontent.com/Lbcl4C5XdI6hPQ5-lsJNw6ffBPRxDdSJj6JQX-tbRhLe7sw9npyjxFVXaCB6Vx7pgQGDtr2Fu3XQPtEGqkpI=w1872-h949-rw)
 
 ### Projede Kullanılan Diğer Teknolojiler
 
