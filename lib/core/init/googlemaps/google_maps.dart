@@ -24,7 +24,7 @@ class _GoogleMapsViewState extends State<GoogleMapsView> {
 
   void updateData(LatLng value) {
     databaseReference.child(widget.imo).update({
-      'Anlik Konum': '${value.latitude}, ${value.longitude}',
+      'location': '${value.latitude}, ${value.longitude}',
     });
   }
 

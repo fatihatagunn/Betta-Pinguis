@@ -23,9 +23,8 @@ class _MyHomePageState extends BaseState<MyHomePage> {
 
   void updateData() {
     databaseReference.child(widget.imo).update({
-      'Anlik Avlanma Derinligi': _depth,
-      'Anlik Su Sicakligi': _temperature,
-      'Anlik Konum': '40.37038345471841, 27.953930036762397',
+      'depth': _depth,
+      'temperature': _temperature,
     });
   }
 
